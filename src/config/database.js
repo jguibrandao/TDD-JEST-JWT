@@ -1,8 +1,10 @@
+require("dotenv").config()
+
 module.exports = {
   host: '127.0.0.1',
-  username: 'docker',
-  password: 'docker',
-  database: 'nodeauth',
+  username: 'postgres',
+  password: process.env.DB_PASSWORD,
+  database: 'TDD',
   dialect: 'postgres',
   operatorAliases: false,
   logging: false,
